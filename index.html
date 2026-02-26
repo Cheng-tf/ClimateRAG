@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap' rel='stylesheet'>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="images/favicon.ico">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>ClimateRAG</title>
+
+    <meta property="og:title" content="ClimateRAG">
+    <meta property="og:description"
+        content="Climate Disclosure Retrieval-Augmented Generation for Evidence-based Question-Answering">
+    <meta property="og:image" content="https://Chengtf.github.io/ClimateRAG/images/opengraph-image.png">
+    <meta property="og:url" content="https://Chengtf.github.io/ClimateRAG/">
+    <meta property="og:type" content="website">
+    <meta property="og:image:width" content="3840">
+    <meta property="og:image:height" content="2160">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClimateRAG">
+    <meta name="twitter:description" content="Climate Disclosure Retrieval-Augmented Generation for Evidence-based Question-Answering">
+    <meta name="twitter:image:width" content="3840">
+    <meta name="twitter:image:height" content="2160">
+    <meta name="twitter:image" content="https://Chengtf.github.io/ClimateRAG/images/opengraph-image.png">
+
+    <style>
+        body {
+            font-family: 'Poppins';
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            text-align:justify;
+            /* background-color: #ebebeb; */
+            background: linear-gradient(to right, #DBEAFE, #D1FAE5);
+        }
+        .demo_AlZc {
+            border-radius: 10px;
+            /* border-width: 1px; */
+            border-color: gray;
+            /* padding: 30px; */
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+         /* body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+        } */
+
+        
+        .container {
+            max-width: 59rem;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .link-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: -0.5rem;
+        }
+
+        .external-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 0.1rem;
+            transition: background-color 0.3s;
+            border-radius: 0.3rem;
+
+            display: flex;
+            flex-direction: row;
+            gap: 0.2rem;
+        }
+
+        .icon {
+            margin-top: 0.2rem;
+        }
+
+        .gray-border {
+            border: 0.1rem solid gray;
+            border-collapse: collapse;
+        }
+
+        .black-border {
+            border: 0.5rem solid black;
+            border-collapse: collapse;
+        }
+
+        .bg-gray {
+            background-color: gainsboro;
+        }
+
+        .center-align {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .dark-font {
+            color: black;
+            font-weight: bolder;
+        }
+
+        .responsive-flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .half-width {
+            width: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .responsive-flex {
+                flex-direction: column;
+            }
+
+            .half-width {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center; margin-top: 3rem;  display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.png" alt="Overview" style="width: 3rem; margin-bottom: 0.5rem; margin-right: 1rem;">
+            <h1>MapQaTor</h1>
+        </div>
+        <h2 style="text-align: center; margin: auto; margin-top: -1rem; font-weight: 500; font-size:x-large;">Climate Disclosure Retrieval-Augmented Generation for Evidence-based Question-Answering</h2>
+        <h2
+            style="text-align: center; margin-top: .5rem; font-weight:900; font-size:x-large; color: orange; background-color: black;">
+            <!-- 🏆 ACL'25 Demo Paper 🏆 -->
+        </h2>
+
+        <h4 style="text-align: center; margin-top: -0.5rem; font-weight: 500">
+
+            Tengfei Cheng
+            <sup style="color: blue">1</sup>,
+        
+            Jie Yin
+            <sup style="color: orangered">2</sup>,
+        
+            Meng Fang
+            <sup style="color: blue">1</sup><sup
+                style="color: black; font-family: 'Roboto', sans-serif; font-weight: 120; font-size: 1rem; margin-left: 2px;">†</sup>
+        
+        </h4>
+        
+        
+        <p style="text-align: center; margin-top: -1rem; font-weight: 500; font-size: medium;">
+        
+            <sup style="color: blue">1</sup>
+            University of Liverpool
+        
+        </p>
+        
+        
+        <p style="text-align: center; margin-top: -1.2rem; font-weight: 500; font-size: medium;">
+        
+            <sup style="color: orangered">2</sup>
+            The University of Sydney
+        
+        </p>
+        
+        
+        <span style="font-weight: 500; display: flex; align-items: center; text-align: center; justify-content: center; font-size: medium; margin-top: -1.2rem;">
+        
+            <span style="font-family: 'Roboto', sans-serif; font-weight: 150; font-size: 1.2rem; margin-right: 4px;">†</span>
+            Corresponding author:&nbsp;
+            <a href="mailto:Meng.Fang@liverpool.ac.uk">Meng.Fang@liverpool.ac.uk</a>
+        
+        </span>
+            
+        <div style="margin-top: 1rem;"></div>
+
+        <span class="link-block" style="margin-top: -0.5rem;">
+            <!-- <a href="https://arxiv.org/abs/2412.21015" class="external-link" style="background-color:#363636; display: flex; align-items: center; padding-top: 8px; padding-bottom: 8px;">
+                <i class="ai ai-arxiv"></i>
+                <span>arXiv</span>
+            </a> -->
+            <a href="" class="external-link" style="background-color:#363636; display: flex; align-items: center; padding-top: 8px; padding-bottom: 8px; width: 5.9rem; justify-content: center;">
+                <i class="fab fa-github" style="margin-right: 4px;"></i>
+                <span>Code</span>
+            </a>
+            <a href="https://youtu.be/bVv7-NYRsTw" class="external-link" style="background-color:#363636; display: flex; align-items: center; padding-top: 8px; padding-bottom: 8px; width: 5.9rem; justify-content: center;">
+                <!-- <span class="material-symbols-outlined icon">folder</span> -->
+                <!-- <p style="font-size:18px; margin: 0; margin-right: 4px;">🤗</p> -->
+                <i class="fa-brands fa-youtube" style=" margin-right: 4px;"></i>
+                <span>Demo</span>
+            </a>
+            <a href="https://co-app.netmind.ai/school/SpatialWebAgent/" class="external-link"
+                style="background-color:#363636; display: flex; align-items: center; padding-top: 8px; padding-bottom: 8px; width: 5.9rem; justify-content: center;">
+                <i class="fa-solid fa-location-dot" style=" margin-right: 4px;"></i>
+                <span>Website</span>
+            </a>
+    
+        </span>
+        <!-- <embed src="files/overview.pdf" type="application/pdf" width="100%" height="600px" /> -->
+        
+
+        <div
+        style="
+          margin-top: 2rem;
+          padding: 1.25rem;
+          border-radius: 0px;
+          background: #1f1f1f;
+          border: 1px solid #3a3a3a;
+          color: #e8e8e8;
+        "
+
+        <img src="images/overview.svg" alt="Overview"
+            style="width: 100%; margin-top: 1rem; margin-top: 2rem;  border-color: black; border-radius: 10px;">
+        <p>Pipeline of the ClimateRAG System.</p>
+
+        <h2 style="text-align: center;">Introduction</h2>
+        <p>
+            Increasingly stringent global regulations demand that companies provide detailed, auditable climate-related disclosures. However, analyzing these long and visually complex reports presents a challenge for regulators and auditors who require precise evidence grounding rather than free-form answers. We present the ClimateRAG system, a structured processing and reasoning framework designed for automated climate disclosure analysis. The system integrates hierarchical document chunking, an agent reasoning pipeline, and a claim extractor module to produce traceable and evidence-linked outputs. Furthermore, we introduce a novel dataset of 367 annotated question–answer pairs covering both single-document and multi-document scenarios. Experimental evaluation results indicate that the proposed methods demonstrate strong effectiveness in analyzing climate disclosure reports. The system aims to bridge the gap between Large Language Models and the rigorous requirements of regulatory auditing, thereby supporting trustworthy sustainability reporting analysis.
+        </p>
+
+     
+
+        <h2 style="text-align: center;">ClimateRAG Overview</h2>
+
+        <video playsinline="" autoplay="" loop="" class="demo_AlZc" muted=""
+            style="border-radius: 10px; width: 100%; margin: 0 auto; display: flex; margin-bottom: 1.8rem; margin-top: 1.8rem; border: #fff solid 1px;">
+            <source src="images/demo.mp4" type="video/mp4">
+        </video>
+
+        For live demo link, please refer to:
+
+
+        <br>
+        Demo Website: https://co-app.netmind.ai/school/SpatialWebAgent/
+
+        <!-- <h2 style="text-align: center;">Data Collection Tools</h2>
+        <img src="images/tools.svg" alt="Overview"
+            style="width: 100%; margin-top: .5rem;">
+        <p>Standardized schema for data collection tools, detailing inputs, outputs, methods, and attributes to unify processing
+        workflows.</p> -->
+
+        <!-- overflow-x: auto;
+        padding: 1.25em 1.5em;
+        white-space: pre;
+        word-wrap: normal; -->
+        <!-- background-color: #f5f5f5;
+        color: #4a4a4a;
+        font-size: .875em; -->
+        <h2 style="text-align: center;">Cite Us</h2>
+        <pre style="white-space: pre; word-wrap: normal; padding: 1.25em 1.5em; overflow-x: auto; background-color: #fff; color: #4a4a4a; font-size: .875em; border-radius: 10px;">
+<code>
+
+
+</code></pre>
+</body>
+
+</html>
+
+
