@@ -230,11 +230,11 @@
         display: block; 
         margin: 2rem auto; 
         border-radius: 10px;">
-        <p>Pipeline for the ClimateRAG System.</p>
+        <p>Overview of the ClimateRAG System. The pipeline converts sustainability reports into hierarchical chunks using OCR and semantic embeddings. Given a query, the system retrieves relevant chunks, clusters them into structured evidence groups, and generates a structured response, linking each claim to its specific source chunks.</p>
 
         <h2 style="text-align: center;">Introduction</h2>
         <p>
-            Increasingly stringent global regulations demand that companies provide detailed, auditable climate-related disclosures. However, analyzing these long and visually complex reports presents a challenge for regulators and auditors who require precise evidence grounding rather than free-form answers. We present the ClimateRAG system, a structured processing and reasoning framework designed for automated climate disclosure analysis. The system integrates hierarchical document chunking, an agent reasoning pipeline, and a claim extractor module to produce traceable and evidence-linked outputs. Furthermore, we introduce a novel dataset of 363 annotated question–answer pairs covering both single-document and multi-document scenarios. Experimental evaluation results indicate that the proposed methods demonstrate strong effectiveness in analyzing climate disclosure reports. The system aims to bridge the gap between Large Language Models and the rigorous requirements of regulatory auditing, thereby supporting trustworthy sustainability reporting analysis.
+            Increasingly stringent global regulations mandate that companies provide detailed, auditable climate-related disclosures. However, the multi-faceted complexity of these long-form reports---characterized by diverse, visually rich, and unstructured content---renders traditional analysis tools ineffective for the rigorous evidence-grounding required in regulatory auditing. To address this gap, we present the ClimateRAG system, a structured processing and reasoning framework designed for automated climate disclosure analysis. The system integrates hierarchical document chunking, an agent reasoning pipeline, and a claim extractor module to produce traceable and evidence-linked outputs. Furthermore, we introduce a new dataset of 363 annotated question–answer pairs covering both single-document and multi-document reasoning scenarios. Experimental evaluation  demonstrate the effectiveness of ClimateRAG in analyzing climate disclosure reports. By leveraging recent advances in Large Language Models, our system provides a practical solution to facilitate reliable and automated sustainability reporting analysis, significantly reducing manual efforts required for regulatory auditing.
         </p>
 
      
@@ -251,18 +251,19 @@
         
         <ul>
             <li>
-                We develop a system, <strong>ClimateRAG</strong>, the first of its kind. 
-                The framework adopts hierarchical chunking and an agent-based reasoning pipeline, 
-                enabling auditable, evidence-linked, and multi-document analysis of climate disclosure reports.
+We develop ClimateRAG, a system that adopts hierarchical chunking and an agent-based reasoning pipeline to enable auditable, evidence-linked, and multi-document analysis of climate disclosure reports.
             </li>
         
             <li>
-                We construct an annotated dataset comprising 363 QA pairs covering both single-document and multi-document scenarios, 
-                specifically designed to reflect real-world regulatory and audit workflows.
+The system provides a practical solution for reliable automated sustainability reporting analysis and significantly reduces the manual effort required for regulatory auditing.
             </li>
         
             <li>
-                We conduct an extensive evaluation across multiple embedding and language models, demonstrating that ClimateRAG consistently outperforms standard RAG baselines.
+We conduct an extensive evaluation across multiple embedding and language models, demonstrating that ClimateRAG consistently outperforms standard RAG baselines.
+            </li>
+We construct an annotated dataset comprising 363 QA pairs covering both single-document and multi-document scenarios, specifically designed to reflect real-world regulatory and audit workflows. 
+            <li>
+We conduct an extensive evaluation across multiple embedding and language models, demonstrating that ClimateRAG consistently outperforms standard RAG baselines.
             </li>
         </ul>
         
